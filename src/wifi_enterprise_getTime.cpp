@@ -11,7 +11,9 @@
 const char* ssid = "eduroam"; // eduroam SSID
 const char* host = "arduino.php5.sk"; //external server domain for HTTPS connection
 
-int counter = 0;
+const char *ntpServer = "pool.ntp.org";
+const char *timezoneEST = "EST5EDT,M3.2.0/2,M11.1.0";
+
 const char* test_root_ca = \
                            "-----BEGIN CERTIFICATE-----\n" \
                            "MIIEsTCCA5mgAwIBAgIQCKWiRs1LXIyD1wK0u6tTSTANBgkqhkiG9w0BAQsFADBh\n" \
@@ -45,8 +47,7 @@ const char* test_root_ca = \
 //const char* test_client_key = "";   //to verify the client
 //const char* test_client_cert = "";  //to verify the client
 
-const char *ntpServer = "pool.ntp.org";
-const char *timezoneEST = "EST5EDT,M3.2.0/2,M11.1.0";
+int counter = 0;
 
 WiFiClientSecure client;
 char timeStringBuff[50];
